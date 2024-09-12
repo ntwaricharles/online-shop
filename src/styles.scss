@@ -14,4 +14,5 @@ body {
   padding: 0;
   background-color: map-get($light-theme, background-color);
   color: map-get($light-theme, text-color);
+  overflow-x: hidden;
 }

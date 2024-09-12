@@ -2,19 +2,25 @@
 @import '../../../styles/mixins';
 
 .header {
-  padding: 20px; // Use px for padding
+  position: fixed;  // Sticky header
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px;  // Use px for padding
   background-color: $primary-color;
   color: $text-light;
   @include flex-center(row, space-between, center);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   .logo {
-    font-size: 24px; // Use px for font size
+    font-size: 24px;  // Use px for font size
     font-weight: bold;
   }
 
   .nav-links {
     @include flex-center(row);
-    gap: 10px; // Use px for gap
+    gap: 10px;  // Use px for gap
 
     a {
       color: $text-light;
@@ -24,5 +30,37 @@
         text-decoration: underline;
       }
     }
+
+    /* Hide the navigation links by default on mobile */
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;  // Below the header
+      right: 0;
+      background-color: $primary-color;
+      padding: 20px;
+      gap: 10px;
+
+      a {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;  // Hidden on larger screens
+    color: $text-light;
+
+    @media (max-width: 768px) {
+      display: inline-block;  // Show on mobile
+    }
+  }
+
+  /* Show the nav links when the menu is toggled open */
+  .nav-open .nav-links {
+    display: flex !important;  // Ensure the menu shows when opened
   }
 }

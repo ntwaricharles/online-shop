@@ -4,7 +4,7 @@
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px; // Use px for gap
+  gap: 16px; // Use px for gap
 
   .product-item {
     padding: 10px; // Use px for padding
@@ -14,13 +14,14 @@
     text-align: center;
 
     h3 {
-      font-size: 16px; // Use px for font size
+      font-size: 18px; // Use px for font size
       color: $text-dark;
     }
 
     img {
       width: 100%;
-      height: auto;
+      height: 250px;  // Set consistent height
+      object-fit: cover;  // Ensure the image fits neatly without stretching
     }
 
     p {
