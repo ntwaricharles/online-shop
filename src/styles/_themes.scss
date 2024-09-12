@@ -1,0 +1,29 @@
+// Light theme
+$light-theme: (
+  background-color: $light-bg,
+  text-color: $text-dark,
+  primary-color: $primary-color,
+);
+
+// Dark theme
+$dark-theme: (
+  background-color: $dark-bg,
+  text-color: $text-light,
+  primary-color: $secondary-color,
+);
+
+// Theme Mixin
+@mixin apply-theme($theme) {
+  background-color: map-get($theme, background-color);
+  color: map-get($theme, text-color);
+}
+
+body {
+  &.light-mode {
+    @include apply-theme($light-theme);
+  }
+
+  &.dark-mode {
+    @include apply-theme($dark-theme);
+  }
+}

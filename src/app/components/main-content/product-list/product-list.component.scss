@@ -1,0 +1,35 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: rem(20px, 16px);
+
+  .product-item {
+    padding: rem(10px, 16px);
+    background-color: $light-bg;
+    border: 1px solid darken($light-bg, 10%);
+    border-radius: rem(5px, 16px);
+    text-align: center;
+
+    h3 {
+      font-size: rem(18px, 16px);
+      color: $text-dark;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      font-size: rem(16px, 16px);
+      color: $secondary-color;
+    }
+
+    a {
+      @include button-style($primary-color, $text-light);
+    }
+  }
+}
