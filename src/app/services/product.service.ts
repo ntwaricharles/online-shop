@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+// eslint-disable-next-line import/no-unresolved
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { Product } from '../model';
 @Injectable({
   providedIn: 'root',
 })
@@ -10,11 +11,11 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getAllProducts(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
   }
 
-  getProductById(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${id}`);
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 }

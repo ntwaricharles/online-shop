@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product.service';
+import { Product } from '../../../model';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,7 +9,7 @@ import { ProductService } from '../../../services/product.service';
   styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
-  product: any;
+  product: Product | null = null; 
 
   constructor(
     private route: ActivatedRoute,
@@ -17,8 +18,16 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.productService.getProductById(Number(id)).subscribe((data) => {
-      this.product = data;
-    });
+    if (id) {
+      this.productService.getProductById(Number(id)).subscribe({
+        next: (data: Product) => {
+          this.product = data;
+        },
+        error: (err) => {
+          console.error('Error fetching product:', err);
+          
+        },
+      });
+    }
   }
 }
