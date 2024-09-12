@@ -1,0 +1,44 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.about-container {
+  padding: 20px; // Use px for padding
+
+  .about-header {
+    text-align: center;
+    padding: 40px; // Use px for padding
+    background-color: $primary-color;
+    color: $text-light;
+
+    h1 {
+      font-size: 36px; // Use px for font size
+      margin-bottom: 20px; // Use px for margin
+    }
+
+    p {
+      font-size: 18px; // Use px for font size
+    }
+  }
+
+  .about-content {
+    margin-top: 40px; // Use px for margin
+    padding: 20px; // Use px for padding
+
+    .mission-section, .team-section {
+      margin-bottom: 40px; // Use px for margin
+      text-align: center;
+
+      h2 {
+        font-size: 28px; // Use px for font size
+        color: $text-dark;
+        margin-bottom: 20px; // Use px for margin
+      }
+
+      p {
+        font-size: 18px; // Use px for font size
+        color: $text-dark;
+        line-height: 1.6;
+      }
+    }
+  }
+}

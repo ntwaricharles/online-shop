@@ -1,31 +1,31 @@
-@import '../../../../styles/variables';
-@import '../../../../styles/mixins';
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
 
 .product-detail {
   max-width: 800px;
-  margin: rem(20px, 16px) auto; 
+  margin: 20px auto; // Use px for margin
   text-align: center;
 
   img {
-    width: 100%;
+    width: 30%;
     height: auto;
-   margin-bottom: rem(20px, 16px);;
+    margin-bottom: 20px; // Use px for margin
   }
 
   h1 {
-    font-size: rem(24px, 16px);
-    margin-bottom: rem(10px, 16px);
+    font-size: 44px; // Use px for font size
+    margin-bottom: 10px; // Use px for margin
     color: $primary-color;
   }
 
   p {
-    font-size: rem(16px, 16px);
-    margin-bottom: rem(20px, 16px);
+    font-size: 16px; // Use px for font size
+    margin-bottom: 20px; // Use px for margin
     color: $text-dark;
   }
 
   h3 {
-    font-size: rem(20px, 16px);
+    font-size: 20px; // Use px for font size
     color: $secondary-color;
   }
 

@@ -1,0 +1,37 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.home-container {
+  padding: 20px;  // Direct px values for debugging
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .hero-section {
+    text-align: center;
+    max-width: 1000px;
+    padding: 60px;
+    background-color: $primary-color;
+    color: $text-light;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      font-size: 48px;  // Using px for size
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 24px;  // Use px for description
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      @include button-style($secondary-color, $text-light);
+      padding: 15px 24px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+}

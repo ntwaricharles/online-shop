@@ -4,17 +4,17 @@
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: rem(20px, 16px);
+  gap: 20px; // Use px for gap
 
   .product-item {
-    padding: rem(10px, 16px);
+    padding: 10px; // Use px for padding
     background-color: $light-bg;
     border: 1px solid darken($light-bg, 10%);
-    border-radius: rem(5px, 16px);
+    border-radius: 5px; // Use px for border radius
     text-align: center;
 
     h3 {
-      font-size: rem(18px, 16px);
+      font-size: 16px; // Use px for font size
       color: $text-dark;
     }
 
@@ -24,7 +24,7 @@
     }
 
     p {
-      font-size: rem(16px, 16px);
+      font-size: 16px; // Use px for font size
       color: $secondary-color;
     }
 

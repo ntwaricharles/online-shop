@@ -2,19 +2,19 @@
 @import '../../../styles/mixins';
 
 .header {
-  padding: rem(20px, 16px);
+  padding: 20px; // Use px for padding
   background-color: $primary-color;
   color: $text-light;
   @include flex-center(row, space-between, center);
 
   .logo {
-    font-size: rem(24px, 16px);
+    font-size: 24px; // Use px for font size
     font-weight: bold;
   }
 
   .nav-links {
     @include flex-center(row);
-    gap: rem(10px, 16px);
+    gap: 10px; // Use px for gap
 
     a {
       color: $text-light;
