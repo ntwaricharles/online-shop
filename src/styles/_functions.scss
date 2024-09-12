@@ -1,14 +1,7 @@
-// Convert px to rem
-// Corrected: rem function to handle base font size properly
 @function rem($px-value, $base-value: 16px) {
-  @return #{$px-value / $base-value} * 1rem;  // Ensure string interpolation to calculate correctly
+  @return #{$px-value / $base-value} * 1rem; 
 }
 
-
-
-
-
-// Darken function for color manipulation
 @function darken-color($color, $percentage) {
   @return darken($color, $percentage);
 }

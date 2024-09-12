@@ -8,7 +8,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent, // Default route
+    component: HomeComponent,
   },
   {
     path: 'about',

@@ -3,29 +3,29 @@
 
 .product-detail {
   max-width: 800px;
-  margin: 20px auto; // Use px for margin
+  margin: 20px auto; 
   text-align: center;
 
   img {
     width: 30%;
     height: auto;
-    margin-bottom: 20px; // Use px for margin
+    margin-bottom: 20px; 
   }
 
   h1 {
-    font-size: 44px; // Use px for font size
-    margin-bottom: 10px; // Use px for margin
+    font-size: 32px;
+    margin-bottom: 10px;
     color: $primary-color;
   }
 
   p {
-    font-size: 16px; // Use px for font size
-    margin-bottom: 20px; // Use px for margin
+    font-size: 16px;
+    margin-bottom: 20px; 
     color: $text-dark;
   }
 
   h3 {
-    font-size: 20px; // Use px for font size
+    font-size: 20px;
     color: $secondary-color;
   }
 

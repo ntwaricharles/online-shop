@@ -2,7 +2,7 @@
 @import '../../../../styles/mixins';
 
 .home-container {
-  padding: 20px;  // Direct px values for debugging
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +18,12 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
     h1 {
-      font-size: 48px;  // Using px for size
+      font-size: 48px; 
       margin-bottom: 30px;
     }
 
     p {
-      font-size: 24px;  // Use px for description
+      font-size: 24px;
       margin-bottom: 40px;
     }
 
