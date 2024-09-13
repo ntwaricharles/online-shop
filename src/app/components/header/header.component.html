@@ -1,9 +1,12 @@
 <div class="header">
   <div class="logo">My Shop</div>
-  <div class="menu-toggle" (click)="toggleNav()">☰</div>  <!-- Mobile menu toggle button -->
+  <div class="menu-toggle" (click)="toggleNav()">☰</div>
   <div [class.nav-open]="isNavOpen" class="nav-links">
     <a routerLink="/home">Home</a>
     <a routerLink="/about">About</a>
     <a routerLink="/products">Products</a>
+    <button appDarkMode class="theme-toggle" (click)="toggleDarkMode()">
+      <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+    </button>
   </div>
 </div>

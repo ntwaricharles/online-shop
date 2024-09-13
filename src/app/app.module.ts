@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 // eslint-disable-next-line import/no-unresolved
 import { HttpClientModule } from '@angular/common/http';
+import { DarkModeDirective } from './dark-mode.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     MainContentComponent,
+    DarkModeDirective
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
